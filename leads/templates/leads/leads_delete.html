@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="text-gray-600 body-font overflow-hidden">
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">You sure delete this lead?</h1>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" >
+                Delete
+            </button>
+        </form>
+  </section>
+
+ 
+{% endblock content %}
